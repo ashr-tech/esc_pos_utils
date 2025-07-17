@@ -1,7 +1,6 @@
-import 'package:image/image.dart';
-import 'dart:typed_data';
-import 'package:flutter/services.dart';
 import 'package:esc_pos_utils/esc_pos_utils.dart';
+import 'package:flutter/services.dart';
+import 'package:image/image.dart';
 
 Future<void> main() async {
   final profile = await CapabilityProfile.load();
@@ -71,4 +70,5 @@ Future<void> main() async {
 
   bytes += generator.feed(2);
   bytes += generator.cut();
+  print(bytes);
 }
